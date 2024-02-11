@@ -1,0 +1,25 @@
+﻿using Google.Protobuf.Collections;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static Mysqlx.Expect.Open.Types.Condition.Types;
+
+namespace Assignment_4
+{
+    internal class Table
+    {
+        CREATE DATABASE IF NOT EXISTS contactsdb;
+
+        USE contactsdb;
+        CREATE TABLE IF NOT EXISTS contacts(
+        contactid INT AUTO_INCREMENT PRIMARY KEY,
+        firstname VARCHAR(50),
+        lastname VARCHAR(50),
+        dob DATE,
+        phone VARCHAR(20),
+        createddate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+    }
+}
